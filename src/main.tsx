@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Authenticator.Provider> 
       <AuthWithSAML> 
         <App />
-        <SignOut /> 
+        <SignOut />
       </AuthWithSAML> 
     </Authenticator.Provider>
   </React.StrictMode>
