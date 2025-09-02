@@ -8,8 +8,8 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
      externalProviders: { 
-      logoutUrls: "https://main.d33vivr5ze9irj.amplifyapp.com",
-      callbackUrls: "https://main.d33vivr5ze9irj.amplifyapp.com",
+      logoutUrls: ["https://main.d33vivr5ze9irj.amplifyapp.com"],
+      callbackUrls:["https://main.d33vivr5ze9irj.amplifyapp.com"],
     },
   },
 });
