@@ -7,9 +7,9 @@ import { defineAuth } from '@aws-amplify/backend';
 export const auth = defineAuth({
   loginWith: {
     email: true,
-     externalProviders: { // 追記
-      logoutUrls: https://main.d33vivr5ze9irj.amplifyapp.com, // 追記
-      callbackUrls: https://main.d33vivr5ze9irj.amplifyapp.com, // 追記
-    }, // 追記
+     externalProviders: { 
+      logoutUrls: "https://main.d33vivr5ze9irj.amplifyapp.com",
+      callbackUrls: "https://main.d33vivr5ze9irj.amplifyapp.com",
+    },
   },
 });
