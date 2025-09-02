@@ -16,7 +16,7 @@ export const { StorageBrowser } = createStorageBrowser({
 
 function App() {
 
-  const { user, signOut } = useAuthenticator();
+  const { signOut } = useAuthenticator();
 
   return (
     <main>
