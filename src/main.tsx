@@ -4,13 +4,19 @@ import App from "./App.tsx";
 import "./index.css";
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
-import { signInWithRedirect } from "aws-amplify/auth" // 追記
+// import { signInWithRedirect } from "aws-amplify/auth" // コメントアウト
+import AuthWithSAML from "./components/AuthWithSAML.tsx"; // 追記
+import { Authenticator } from '@aws-amplify/ui-react'; // 追記
 Amplify.configure(outputs);
-signInWithRedirect({ // 追記
-  provider: { custom: "MicrosoftEntraIDSAML" } // 追記
-}) // 追記
+// signInWithRedirect({ // コメントアウト
+//   provider: { custom: "MicrosoftEntraIDSAML" }  // コメントアウト
+// })  // コメントアウト
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <Authenticator.Provider>
+      <AuthWithSAML> 
+        <App />
+      </AuthWithSAML> 
+    </Authenticator.Provider> 
   </React.StrictMode>
 );
