@@ -4,11 +4,11 @@ import {
   createStorageBrowser,
 } from '@aws-amplify/ui-react-storage/browser';
 import "@aws-amplify/ui-react-storage/styles.css";
-//import { Amplify } from "aws-amplify";
+import { Amplify } from "aws-amplify";
 import { useAuthenticator } from '@aws-amplify/ui-react';
-//import config from '../amplify_outputs.json';
+import config from '../amplify_outputs.json';
 
-//Amplify.configure(config);
+Amplify.configure(config);
 
 export const { StorageBrowser } = createStorageBrowser({
   config: createAmplifyAuthAdapter(),
