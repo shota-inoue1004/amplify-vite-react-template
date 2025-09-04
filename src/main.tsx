@@ -11,6 +11,7 @@ import outputs from "../amplify_outputs.json";
 import AuthWithSAML from "./components/AuthWithSAML.tsx"; // 追記
 import { Authenticator } from '@aws-amplify/ui-react'; // 追記
 //import { useAuthenticator } from '@aws-amplify/ui-react';
+import App from "./App.tsx";
 Amplify.configure(outputs);
 
 export const { StorageBrowser } = createStorageBrowser({
@@ -23,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Authenticator.Provider>
       <AuthWithSAML> 
-      <h1>てすと</h1>
+      <App />
       </AuthWithSAML> 
     </Authenticator.Provider> 
   </React.StrictMode>
