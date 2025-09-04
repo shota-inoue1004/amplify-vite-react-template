@@ -9,16 +9,16 @@ import AuthWithSAML from "./components/AuthWithSAML.tsx"; // 追記
 import { Authenticator } from '@aws-amplify/ui-react'; // 追記
 
 
-// Storage設定を config.storage に統合する（型安全）
-const amplifyConfig = {
-  ...config,
-  storage: {
-    ...config.storage,
-    defaultAccessLevel: 'protected' // 認証済みユーザーに限定
+Amplify.configure({
+  ...(config as any),
+  Storage: {
+    AWSS3: {
+      bucket: config.storage.bucket_name,
+      region: config.storage.aws_region
+    },
+    defaultAccessLevel: "protected"
   }
-};
-
-Amplify.configure(amplifyConfig);
+});
 
 
 // signInWithRedirect({ // コメントアウト
