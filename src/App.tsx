@@ -8,18 +8,7 @@ import "@aws-amplify/ui-react-storage/styles.css";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
-const amplifyConfig = {
-  ...config,
-  // Storage設定を config.storage に統合する
-  storage: {
-    ...config.storage,
-    defaultAccessLevel: 'protected' // 認証済みユーザーに限定
-  }
-};
-
-Amplify.configure(amplifyConfig);
-
-
+Amplify.configure(config);
 
 export const { StorageBrowser } = createStorageBrowser({
   config: createAmplifyAuthAdapter(),
