@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Authenticator.Provider>
       <AuthWithSAML> 
-      <StorageBrowser/>
+      <h1>てすと</h1>
       </AuthWithSAML> 
     </Authenticator.Provider> 
   </React.StrictMode>
