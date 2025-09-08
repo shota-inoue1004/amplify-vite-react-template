@@ -15,7 +15,7 @@ Amplify.configure({
     bucket_name: "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-21j1nngchbx2",
     buckets: [
       {
-        name: "myProjectFiles",
+        name: "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-21j1nngchbx2",
         bucket_name: "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-21j1nngchbx2",
         aws_region: "ap-northeast-1",
         paths: {
