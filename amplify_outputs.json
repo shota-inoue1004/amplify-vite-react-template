@@ -1,0 +1,93 @@
+{
+  "auth": {
+    "user_pool_id": "ap-northeast-1_4ZiNe5olQ",
+    "aws_region": "ap-northeast-1",
+    "user_pool_client_id": "26tqst3lsdqn23ec45jv0em7ln",
+    "identity_pool_id": "ap-northeast-1:df825c4b-a027-4fb1-99e6-3e155c1e83cc",
+    "mfa_methods": [],
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "mfa_configuration": "NONE",
+    "password_policy": {
+      "min_length": 8,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_uppercase": true
+    },
+    "oauth": {
+      "identity_providers": [],
+      "redirect_sign_in_uri": [
+        "https://main.d33vivr5ze9irj.amplifyapp.com"
+      ],
+      "redirect_sign_out_uri": [
+        "https://main.d33vivr5ze9irj.amplifyapp.com"
+      ],
+      "response_type": "code",
+      "scopes": [
+        "phone",
+        "email",
+        "openid",
+        "profile",
+        "aws.cognito.signin.user.admin"
+      ],
+      "domain": "303987caaa3a791f7b12.auth.ap-northeast-1.amazoncognito.com"
+    },
+    "unauthenticated_identities_enabled": false
+  },
+  "storage": {
+    "aws_region": "ap-northeast-1",
+    "bucket_name": "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-21j1nngchbx2",
+    "buckets": [
+      {
+        "name": "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-21j1nngchbx2",
+        "bucket_name": "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-21j1nngchbx2",
+        "aws_region": "ap-northeast-1",
+        "paths": {
+          "public/*": {
+            "guest": [
+              "get",
+              "list"
+            ],
+            "authenticated": [
+              "get",
+              "list",
+              "write",
+              "delete"
+            ]
+          },
+          "protected/*": {
+            "authenticated": [
+              "get",
+              "list"
+            ]
+          },
+          "protected/${cognito-identity.amazonaws.com:sub}/*": {
+            "entityidentity": [
+              "get",
+              "list",
+              "write",
+              "delete"
+            ]
+          },
+          "private/${cognito-identity.amazonaws.com:sub}/*": {
+            "entityidentity": [
+              "get",
+              "list",
+              "write",
+              "delete"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "version": "1.3"
+}
