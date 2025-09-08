@@ -6,36 +6,9 @@ import {
 } from '@aws-amplify/ui-react-storage/browser';
 import "@aws-amplify/ui-react-storage/styles.css";
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
+//import '@aws-amplify/ui-react/styles.css';
 
-Amplify.configure({
-  ...outputs,
-  storage:{
-    aws_region:"ap-northeast-1",
-    bucket_name: "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-rvwlvsseazta",
-    buckets: [
-      {
-        name: "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-rvwlvsseazta",
-        bucket_name: "amplify-d33vivr5ze9irj-ma-myprojectfilesbucket89ac-rvwlvsseazta",
-        aws_region: "ap-northeast-1",
-        paths: {
-          "public/*": {
-            "guest": [
-              "get",
-              "list"
-            ],
-            "authenticated": [
-              "get",
-              "list",
-              "write",
-              "delete"
-            ]
-          },
-        }
-      }
-    ]
-  }
-});
+Amplify.configure(outputs);
 
 export const { StorageBrowser } = createStorageBrowser({
   config: createAmplifyAuthAdapter(),
